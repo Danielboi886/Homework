@@ -16,13 +16,8 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(item) {
-  const newShoppingCart = shoppingCart.concat(`${item}`);
-  if (newShoppingCart.length > 3) {
-    return `You bought ${newShoppingCart.splice(0, 1).join(', ')}!`;
-  } else {
-    return `You bought ${newShoppingCart.join(', ')}!`;
-  }
+function addToShoppingCart(/* TODO parameter(s) go here */) {
+  // TODO complete this function
 }
 
 // ! Test functions (plain vanilla JavaScript)

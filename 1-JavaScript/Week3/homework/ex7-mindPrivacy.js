@@ -30,10 +30,10 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData() {
-  const { name, occupation, gender } = employeeRecords;
+function filterPrivateData(/* parameter(s) go here */) {
+  // TODO complete this function
 }
-console.log(filterPrivateData());
+
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');

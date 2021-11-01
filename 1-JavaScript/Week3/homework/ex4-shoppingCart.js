@@ -23,15 +23,10 @@ you have more than 3 items in your shopping cart the first item gets taken out.
 const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
-function addToShoppingCart(item) {
-  const newShoppingCart = shoppingCart.concat(`${item}`);
-  if (newShoppingCart.length > 3) {
-    return `You bought ${newShoppingCart.splice(0, 1).join(', ')}!`;
-  } else {
-    return `You bought ${newShoppingCart.join(', ')}!`;
-  }
+function addToShoppingCart(/* parameters go here */) {
+  // TODO complete this function
 }
-console.log(addToShoppingCart());
+
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log(

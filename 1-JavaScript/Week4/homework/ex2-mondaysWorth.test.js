@@ -31,12 +31,10 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(timeArr,salaryEach) {
-  timeArr = mondayTasks.map(mondayTasks => mondayTasks.duration)
-  salaryEach = timeArr.map(x => x*hourlyRate/60)
-  const reducer = (accumulator, curr) => accumulator + curr;
-  return `€${salaryEach.reduce(reducer).toFixed(2)}`
+function computeEarnings(/* TODO parameter(s) go here */) {
+  // TODO complete this function
 }
+
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
   test('should take two parameters', () => {

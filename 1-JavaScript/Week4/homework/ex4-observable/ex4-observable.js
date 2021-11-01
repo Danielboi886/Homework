@@ -17,15 +17,13 @@ function createObservable() {
   const subscribers = [];
   return {
     subscribe: function (subscriber) {
-      subscribers.push(subscriber)
+      // TODO complete this function
     },
     notify: function (message) {
-      subscribers.forEach(call)
-      function call (){
-        return console.log(message)
-      }
-    }
-  }
+      // TODO complete this function
+    },
+  };
 }
+
 // ! Do not change or remove the code below
 module.exports = createObservable;
