@@ -23,20 +23,21 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 const catImg = document.getElementsByTagName('img');
 const cat = catImg[0];
-console.log(cat);
-cat.style.left = `0px`;
-let newDistance = 0;
-let secondsElapsed = 0;
-const startTime = new Date().getTime();
-const walkTheCat = function () {
-  const currTime = new Date().getTime();
-  secondsElapsed = (currTime - startTime) / 1000;
-  newDistance = secondsElapsed * 500;
-  console.log(newDistance);
-  cat.style.left = newDistance + 'px';
-  if (newDistance < outerWidth - cat.width) {
-    window.requestAnimationFrame(walkTheCat)
-};
-
-// TODO execute `catWalk` when the browser has completed loading the page
-walkTheCat();
+let currentPos = 0
+let s
+function catWalk() {
+  currentPos += 10
+  cat.style.left = currentPos +'px'
+  window.requestAnimationFrame(catWalk)
+  if (currentPos > outerWidth-cat.width)
+  {currentPos = 0-cat.width}
+if (currentPos > Math.abs(outerWidth/2) ){
+    s = setTimeout(() => {
+         cat.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+         currentPos = Math.abs(outerWidth / 2);
+      })
+   clearTimeout(s,5000)
+   console.log(currentPos)
+} 
+}
+window.addEventListener ('load', ()=> {catWalk()});
