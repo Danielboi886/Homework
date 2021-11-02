@@ -41,7 +41,7 @@ const myBooks = [
 function createBookList(books) {
   const imgRepo = ['assets/the_design_of_everyday_things.jpg','assets/the_most_human_human.jpg','assets/the_pragmatic_programmer.jpg']
   const ul=document.createElement('ul')
-  for(i=0;i<books.length;i++)
+  for(let i=0;i<books.length;i++)
   {
       const li=document.createElement('li');
       const p = document.createElement("p")

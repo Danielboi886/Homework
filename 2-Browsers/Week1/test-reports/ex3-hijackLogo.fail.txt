@@ -1,0 +1,34 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (3 ms)
+    × should set the `src` property (26 ms)
+    √ should set the `srcset` property
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        3.236 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+
+*** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:52 - Unknown word (Xdpd)
