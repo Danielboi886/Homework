@@ -39,9 +39,29 @@ const myBooks = [
 ];
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
-}
-
-const ulElement = createBookList(myBooks);
-
-document.querySelector('#bookList').appendChild(ulElement);
+  const imgRepo = ['assets/the_design_of_everyday_things.jpg','assets/the_most_human_human.jpg','assets/the_pragmatic_programmer.jpg']
+  const ul=document.createElement('ul')
+  for(i=0;i<books.length;i++)
+  {
+      const li=document.createElement('li');
+      const p = document.createElement("p")
+      p.textContent= [books[i].title,books[i].author]
+      const image = document.createElement('img')
+      image.src = imgRepo[i]
+      li.appendChild(p)
+      li.appendChild(image)
+      ul.appendChild(li)
+      if (books[i].alreadyRead === true)
+      {li.style.backgroundColor = "green"}
+      else
+      {li.style.backgroundColor = "red"}
+       ul.style.display = "flex"
+       li.style.margin = "20px"
+       li.style.padding= "20px"
+  }
+ return ul
+ }
+ 
+ const ulElement = createBookList(myBooks);
+ 
+ document.querySelector('#bookList').appendChild(ulElement);
