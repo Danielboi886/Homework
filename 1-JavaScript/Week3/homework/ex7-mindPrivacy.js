@@ -30,10 +30,15 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData() {
-  const { name, occupation, gender } = employeeRecords;
+function filterPrivateData(employeeRecordsArray) {
+  const newEmployeeRecord = []
+  employeeRecordsArray.forEach(employee =>{
+    const {name,occupation,email} = employee; 
+    newEmployeeRecord.push(({name,occupation,email}));
+  });
+  return newEmployeeRecord
 }
-console.log(filterPrivateData());
+console.log(filterPrivateData(employeeRecords));
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');
@@ -64,3 +69,6 @@ function test() {
 }
 
 test();
+
+
+//employeeRecord =>{ const {name,occupation,email}= employeeRecord; const newEmployeeRecord = {name,occupation,email};return newEmployeeRecord });

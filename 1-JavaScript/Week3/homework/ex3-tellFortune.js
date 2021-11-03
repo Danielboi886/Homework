@@ -43,30 +43,12 @@ const jobTitles = [
   'plumber',
   'teacher',
 ];
-const personalSet = [
-  numKids[Math.floor(Math.random() * numKids.length)],
-  partnerNames[Math.floor(Math.random() * partnerNames.length)],
-  locations[Math.floor(Math.random() * locations.length)],
-  jobTitles[Math.floor(Math.random() * jobTitles.length)],
-];
-
-// This function should take an array as its parameter and return
-// a randomly selected element as its return value.
-function selectRandomly(numKids, partnerNames, locations, jobTitles) {
-  return {
-    numKids,
-    partnerNames,
-    locations,
-    jobTitles,
-  };
+function selectRandomly (array){
+ return array[Math.floor(Math.random() * array.length)]
 }
 
-function tellFortune() {
-  return `You will be a ${selectRandomly(...personalSet).jobTitles} in ${
-    selectRandomly(...personalSet).locations
-  }, married to ${selectRandomly(...personalSet).partnerNames}, with ${
-    selectRandomly(...personalSet).numKids
-  } kid(s)`;
+function tellFortune(numKids, partnerNames, locations, jobTitles){
+  return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(locations)}, married to ${selectRandomly(partnerNames)} with ${selectRandomly(numKids)} kid(s).`
 }
 
 console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

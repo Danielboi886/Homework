@@ -1,6 +1,7 @@
 *** Unit Test Error Report ***
 
-- giveCompliment should have all TODO comments removed
 - giveCompliment should include a `compliments` array initialized with 10 strings
-  No such array found
+  Not all elements are strings
 - giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are undefined, HackYourFuture!
+  Received: You are awesome, HackYourFuture!

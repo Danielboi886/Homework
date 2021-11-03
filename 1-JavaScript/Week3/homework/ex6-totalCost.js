@@ -26,17 +26,15 @@ const cartForParty = {
   butter: 1.5,
   cake: 8.25,
   cola: 5.5,
-};
+}; 
 
-function calculateTotalPrice() {
-  let total = 0;
-  let i;
-  for (i in cartForParty) {
-    total += cartForParty[i];
-  }
-  return total;
+function calculateTotalPrice(cart) {
+  const total = Object.values(cart).reduce((t, n) => t + n)
+  return total
 }
-console.log(`Total: € ${calculateTotalPrice()}`);
+
+
+console.log(`Total: € ${calculateTotalPrice(cartForParty)}`);
 
 function test1() {
   console.log('Test 1: calculateTotalPrice should take one parameter');
