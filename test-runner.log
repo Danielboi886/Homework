@@ -581,3 +581,236 @@ Snapshots:   0 total
 Time:        5.984 s, estimated 15 s
 Ran all test suites matching /ex5-catWalk.test.js/i.
 
+2021-11-04 11:53:48 info: ----------------------------------------
+2021-11-04 11:53:48 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-11-04 11:53:48 info: ----------------------------------------
+2021-11-04 11:53:59 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.202 s)
+  Generated HTML
+    × HTML should be syntactically valid (114 ms)
+    √ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    √ should contain a <ul> with 3 <li> elements (2 ms)
+    √ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    √ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      10:163  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:329  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:486  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/wcag\\h37.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:39:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        6.938 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+
+2021-11-04 11:59:14 info: ----------------------------------------
+2021-11-04 11:59:14 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-11-04 11:59:14 info: ----------------------------------------
+2021-11-04 11:59:23 info: All unit tests passed.
+2021-11-04 11:59:29 info: All steps were completed successfully
+2021-11-04 12:04:25 info: ---------------------------------------
+2021-11-04 12:04:25 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-04 12:04:25 info: ---------------------------------------
+2021-11-04 12:04:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.094 s)
+  Generated HTML
+    √ should be syntactically valid (109 ms)
+    √ the body font-family should be `Arial, sans-serif` (1 ms)
+    √ each <li> should have the CSS class `list-item` (2 ms)
+    × each <li> should rendered red (41 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        6.38 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-04 12:04:41 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Dannyboi)
+
+2021-11-04 12:06:03 info: ---------------------------------------
+2021-11-04 12:06:03 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-04 12:06:03 info: ---------------------------------------
+2021-11-04 12:06:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.264 s)
+  Generated HTML
+    √ should be syntactically valid (113 ms)
+    √ the body font-family should be `Arial, sans-serif` (1 ms)
+    √ each <li> should have the CSS class `list-item` (2 ms)
+    × each <li> should rendered red (41 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        6.428 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-04 12:06:19 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Dannyboi)
+
+2021-11-04 12:07:42 info: ---------------------------------------
+2021-11-04 12:07:42 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-04 12:07:42 info: ---------------------------------------
+2021-11-04 12:07:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    √ should be syntactically valid (111 ms)
+    √ the body font-family should be `Arial, sans-serif` (2 ms)
+    √ each <li> should have the CSS class `list-item` (1 ms)
+    × each <li> should rendered red (51 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        5.955 s, estimated 6 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-04 12:07:57 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Dannyboi)
+
+2021-11-04 12:11:25 info: ---------------------------------------
+2021-11-04 12:11:25 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-04 12:11:25 info: ---------------------------------------
+2021-11-04 12:11:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    √ should be syntactically valid (101 ms)
+    √ the body font-family should be `Arial, sans-serif` (2 ms)
+    √ each <li> should have the CSS class `list-item` (1 ms)
+    × each <li> should rendered red (42 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        6.05 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-04 12:11:40 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Dannyboi)
+
+2021-11-04 12:13:57 info: ---------------------------------------
+2021-11-04 12:13:57 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-04 12:13:57 info: ---------------------------------------
+2021-11-04 12:14:08 info: All unit tests passed.
+2021-11-04 12:14:14 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Dannyboi)
+
+2021-11-04 12:15:04 info: ------------------------------------------
+2021-11-04 12:15:04 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-11-04 12:15:04 info: ------------------------------------------
+2021-11-04 12:15:09 info: All unit tests passed.
+2021-11-04 12:15:15 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:51 - Unknown word (Xdpd)
+
+2021-11-04 12:16:21 info: --------------------------------------------
+2021-11-04 12:16:21 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2021-11-04 12:16:21 info: --------------------------------------------
+2021-11-04 12:16:32 info: All unit tests passed.
+2021-11-04 12:16:38 info: All steps were completed successfully
+2021-11-04 12:18:22 info: ---------------------------------------
+2021-11-04 12:18:22 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-11-04 12:18:22 info: ---------------------------------------
+2021-11-04 12:18:31 info: All unit tests passed.
+2021-11-04 12:18:37 info: All steps were completed successfully

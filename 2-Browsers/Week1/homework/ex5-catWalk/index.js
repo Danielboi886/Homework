@@ -23,21 +23,25 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 const catImg = document.getElementsByTagName('img');
 const cat = catImg[0];
-let currentPos = 0
-let s
+let currentPos = 0;
+let s;
 function catWalk() {
-  currentPos += 10
-  cat.style.left = currentPos +'px'
-  window.requestAnimationFrame(catWalk)
-  if (currentPos > outerWidth-cat.width)
-  {currentPos = 0-cat.width}
-if (currentPos > Math.abs(outerWidth/2) ){
+  currentPos += 10;
+  cat.style.left = currentPos + 'px';
+  window.requestAnimationFrame(catWalk);
+  if (currentPos > outerWidth - cat.width) {
+    currentPos = 0 - cat.width;
+  }
+  if (currentPos > Math.abs(outerWidth / 2)) {
     s = setTimeout(() => {
-         cat.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
-         currentPos = Math.abs(outerWidth / 2);
-      })
-   clearTimeout(s,5000)
-   console.log(currentPos)
-} 
+      cat.src =
+        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+      currentPos = Math.abs(outerWidth / 2);
+    });
+    clearTimeout(s, 5000);
+    console.log(currentPos);
+  }
 }
-window.addEventListener ('load', ()=> {catWalk()});
+window.addEventListener('load', () => {
+  catWalk();
+});
