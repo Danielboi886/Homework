@@ -27,14 +27,18 @@ exercise file.
 const rollDice = require('../../helpers/pokerDiceRoller');
 
 function rollTheDices() {
-  // TODO Refactor this function
   const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  return Promise.all(dices.map((dice) => rollDice(dice)));
 }
 
 rollTheDices()
   .then((results) => console.log('Resolved!', results))
   .catch((error) => console.log('Rejected!', error.message));
 
+/* 
+  Because promise all will resolve promises and pending promises asynchronously.
+   And I guess that's why in ex3 the rice keep rolling? 
+   And the reason why you put some bonus in ex3 is to let us know how asynchronous execution is and the usefulness of it. 
+  **/
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
