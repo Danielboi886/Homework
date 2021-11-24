@@ -1,0 +1,25 @@
+2021-11-24 06:02:54 info: ---------------------------------------
+2021-11-24 06:02:54 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-24 06:02:54 info: ---------------------------------------
+2021-11-24 06:03:02 info: All unit tests passed.
+2021-11-24 06:03:08 info: All steps were completed successfully
+2021-11-24 06:03:28 info: -------------------------------------------------
+2021-11-24 06:03:28 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-11-24 06:03:28 info: -------------------------------------------------
+2021-11-24 06:03:33 info: All unit tests passed.
+2021-11-24 06:03:39 info: All steps were completed successfully
+2021-11-24 06:03:50 info: ----------------------------------------
+2021-11-24 06:03:50 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-24 06:03:50 info: ----------------------------------------
+2021-11-24 06:03:55 info: All unit tests passed.
+2021-11-24 06:04:01 info: All steps were completed successfully
+2021-11-24 06:04:15 info: --------------------------------------------
+2021-11-24 06:04:15 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-24 06:04:15 info: --------------------------------------------
+2021-11-24 06:04:21 info: All unit tests passed.
+2021-11-24 06:04:27 info: All steps were completed successfully
+2021-11-24 06:04:39 info: ----------------------------------------------
+2021-11-24 06:04:39 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-11-24 06:04:39 info: ----------------------------------------------
+2021-11-24 06:04:44 info: All unit tests passed.
+2021-11-24 06:04:50 info: All steps were completed successfully

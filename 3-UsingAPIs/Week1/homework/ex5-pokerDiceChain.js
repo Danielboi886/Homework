@@ -13,11 +13,8 @@ to expand the given promise chain to include five dices.
 // The line below makes the rollDice() function available to this file.
 // Do not change or remove it.
 const rollDice = require('../../helpers/pokerDiceRoller');
-
 function rollTheDices() {
   const results = [];
-
-  // TODO: expand the chain to include five dices
   return rollDice(1)
     .then((value) => {
       results.push(value);
@@ -25,10 +22,21 @@ function rollTheDices() {
     })
     .then((value) => {
       results.push(value);
+      return rollDice(3);
+    })
+    .then((value) => {
+      results.push(value);
+      return rollDice(4);
+    })
+    .then((value) => {
+      results.push(value);
+      return rollDice(5);
+    })
+    .then((value) => {
+      results.push(value);
       return results;
     });
 }
-
 rollTheDices()
   .then((results) => console.log('Resolved!', results))
   .catch((error) => console.log('Rejected!', error.message));
