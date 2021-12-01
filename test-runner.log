@@ -1,0 +1,591 @@
+2021-11-28 01:16:08 info: ---------------------------------------------
+2021-11-28 01:16:08 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-11-28 01:16:08 info: ---------------------------------------------
+2021-11-28 01:16:22 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js (6.085 s)
+  programmerFun
+    × HTML should be syntactically valid (116 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `fetch()` (1 ms)
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/wcag\\h37.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        8.671 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+
+2021-11-28 01:16:26 error: *** ESLint Report ***
+
+ex1-programmerFun/index.js
+  38:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-11-28 01:17:50 info: ---------------------------------------------
+2021-11-28 01:17:50 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-11-28 01:17:50 info: ---------------------------------------------
+2021-11-28 01:17:59 info: All unit tests passed.
+2021-11-28 01:18:02 error: *** ESLint Report ***
+
+ex1-programmerFun/index.js
+  39:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-11-28 01:18:39 info: ---------------------------------------------
+2021-11-28 01:18:39 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-11-28 01:18:39 info: ---------------------------------------------
+2021-11-28 01:18:49 info: All unit tests passed.
+2021-11-28 01:18:55 info: All steps were completed successfully
+2021-12-01 12:46:57 info: ------------------------------------------
+2021-12-01 12:46:57 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2021-12-01 12:46:57 info: ------------------------------------------
+2021-12-01 12:47:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (5.897 s)
+  pokemonApp
+    × HTML should be syntactically valid (104 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `fetch()` (1 ms)
+    √ should use `await fetch()`
+    √ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:176  error  <img> is missing required \"src\" attribute  element-required-attributes
+      11:176  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 2 problems (2 errors, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/element-required-attributes.html
+      https://html-validate.org/rules/wcag\\h37.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        8.266 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+
+2021-12-01 02:55:32 info: -----------------------------------------
+2021-12-01 02:55:32 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-01 02:55:32 info: -----------------------------------------
+2021-12-01 02:55:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    × should have all TODO comments removed (5 ms)
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait (1 ms)
+    × should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (7 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:49:55)
+
+  ● ex3-rollAnAce › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      59 |
+      60 |   test('should use try/catch', () => {
+    > 61 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      62 |   });
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:61:28)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      55 |     const randomRollsToDo =
+      56 |       getRandomNumber(MAX_ROLLS - MIN_ROLLS + 1) + MIN_ROLLS;
+    > 57 |
+         | ^
+      58 |     logStamped(`Dice ${dice} scheduled for ${randomRollsToDo} rolls...`);
+      59 |
+      60 |     let offTable = false;
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:57:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:75:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:30:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        3.135 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-12-01 07:56:43 info: ----------------------------------------
+2021-12-01 07:56:43 info: >>> Running Unit Test `ex4-diceRace` <<<
+2021-12-01 07:56:43 info: ----------------------------------------
+2021-12-01 07:56:51 info: All unit tests passed.
+2021-12-01 07:56:54 error: *** ESLint Report ***
+
+ex4-diceRace.js
+  23:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-12-01 08:29:07 info: ----------------------------------------
+2021-12-01 08:29:07 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2021-12-01 08:29:07 info: ----------------------------------------
+2021-12-01 08:29:07 warn: A unit test file was not provided.
+2021-12-01 08:29:16 error: *** Spell Checker Report ***
+
+
+2021-12-01 08:29:48 info: ----------------------------------------
+2021-12-01 08:29:48 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2021-12-01 08:29:48 info: ----------------------------------------
+2021-12-01 08:29:48 warn: A unit test file was not provided.
+2021-12-01 08:29:54 info: All steps were completed successfully
+2021-12-01 09:48:15 info: -----------------------------------------
+2021-12-01 09:48:15 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-01 09:48:15 info: -----------------------------------------
+2021-12-01 09:48:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (3 ms)
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (9 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      55 |     const randomRollsToDo =
+      56 |       getRandomNumber(MAX_ROLLS - MIN_ROLLS + 1) + MIN_ROLLS;
+    > 57 |
+         | ^
+      58 |     logStamped(`Dice ${dice} scheduled for ${randomRollsToDo} rolls...`);
+      59 |
+      60 |     let offTable = false;
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:57:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:75:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:30:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        3.845 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-12-01 09:51:48 info: -----------------------------------------
+2021-12-01 09:51:48 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-01 09:51:48 info: -----------------------------------------
+2021-12-01 09:51:55 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (2 ms)
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+    × should resolve as soon as a dice settles on an ACE (15 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      55 |     const randomRollsToDo =
+      56 |       getRandomNumber(MAX_ROLLS - MIN_ROLLS + 1) + MIN_ROLLS;
+    > 57 |
+         | ^
+      58 |     logStamped(`Dice ${dice} scheduled for ${randomRollsToDo} rolls...`);
+      59 |
+      60 |     let offTable = false;
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:57:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:75:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:30:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        2.242 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-12-01 09:52:15 info: ------------------------------------------
+2021-12-01 09:52:15 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2021-12-01 09:52:15 info: ------------------------------------------
+2021-12-01 09:52:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    × HTML should be syntactically valid (102 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    √ should use `await fetch()`
+    √ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:176  error  Attribute \"src\" has invalid value \"\"  attribute-allowed-values·
+    ✖ 1 problem (1 error, 0 warnings)·
+    More information:
+      https://html-validate.org/rules/attribute-allowed-values.html·
+    "
+
+      44 |   const report = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(report);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        6.132 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+
+2021-12-01 09:53:22 info: ------------------------------------------
+2021-12-01 09:53:22 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2021-12-01 09:53:22 info: ------------------------------------------
+2021-12-01 09:53:31 info: All unit tests passed.
+2021-12-01 09:53:37 info: All steps were completed successfully
+2021-12-01 09:55:00 info: ------------------------------------------
+2021-12-01 09:55:00 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2021-12-01 09:55:00 info: ------------------------------------------
+2021-12-01 09:55:10 info: All unit tests passed.
+2021-12-01 09:55:16 info: All steps were completed successfully
+2021-12-01 10:03:45 info: -----------------------------------------
+2021-12-01 10:03:45 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-01 10:03:45 info: -----------------------------------------
+2021-12-01 10:03:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (2 ms)
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (15 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      55 |     const randomRollsToDo =
+      56 |       getRandomNumber(MAX_ROLLS - MIN_ROLLS + 1) + MIN_ROLLS;
+    > 57 |
+         | ^
+      58 |     logStamped(`Dice ${dice} scheduled for ${randomRollsToDo} rolls...`);
+      59 |
+      60 |     let offTable = false;
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:57:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:75:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:30:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.952 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-12-01 10:05:17 info: -----------------------------------------
+2021-12-01 10:05:17 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-01 10:05:17 info: -----------------------------------------
+2021-12-01 10:05:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (4 ms)
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (9 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      55 |     const randomRollsToDo =
+      56 |       getRandomNumber(MAX_ROLLS - MIN_ROLLS + 1) + MIN_ROLLS;
+    > 57 |
+         | ^
+      58 |     logStamped(`Dice ${dice} scheduled for ${randomRollsToDo} rolls...`);
+      59 |
+      60 |     let offTable = false;
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:57:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:70:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:70:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:75:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:30:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        3.042 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
